@@ -9,10 +9,21 @@ public class UpdateDTO {
     private  String lastName;
      private  String email;
 
-    public UpdateDTO(String firstName, String lastName, String email) {
+     private  String password;
+
+    public UpdateDTO(String firstName, String lastName, String email ,String  password) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
+        this.password=password;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     public UpdateDTO() {
@@ -21,6 +32,8 @@ public class UpdateDTO {
     public String getFirstName() {
         return firstName;
     }
+
+
 
     public void setFirstName(String firstName) {
         this.firstName = firstName;

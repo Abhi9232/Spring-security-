@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api")
 public class UserController {
 
     private final UserService userService;
@@ -35,6 +35,7 @@ public class UserController {
     public  ResponseEntity<?>getuserbyid(@PathVariable Long id){
         return  ResponseEntity.ok(userService.getuserbyid(id));
     }
+
 
 
     @PutMapping("user/{id}")

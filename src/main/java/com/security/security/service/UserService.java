@@ -36,6 +36,7 @@ public class UserService {
          user.setFirstName(register.getFirstName());
          user.setLastName(register.getLastName());
          user.setEmail(register.getEmail());
+         user.setPassord(register.getPassword());
          userRepository.save(user);
 
          return  ResponseEntity.ok().body("user is created");
@@ -54,6 +55,7 @@ public class UserService {
         if(dto.getFirstName()!=null)update.setFirstName(dto.getFirstName());
         if(dto.getLastName()!=null)update.setLastName(dto.getLastName());
         if (dto.getEmail()!=null)update.setEmail(dto.getEmail());
+        if(dto.getPassword()!=null)update.setPassord(dto.getPassword());
 
         userRepository.save(update);
 

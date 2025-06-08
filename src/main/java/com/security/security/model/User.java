@@ -19,14 +19,17 @@ public class User {
 
     private  String email;
 
+    private  String passord;
+
     public  User(){
 
     }
 
-    public  User(   String firstName, String lastName, String email){
+    public  User(   String firstName, String lastName, String email, String passord){
         this.firstName=firstName;
         this.lastName=lastName;
         this.email=email;
+        this.passord=passord;
 
     }
 
@@ -60,5 +63,13 @@ public class User {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getPassord() {
+        return passord;
+    }
+
+    public void setPassord(String passord) {
+        this.passord = passord;
     }
 }
